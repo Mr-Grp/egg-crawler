@@ -12,13 +12,13 @@ async function main(parse, url, app, options) {
   try {
     const page = await browser.newPage()
     // 监听页面内部的console消息
-    page.on('console', msg => {
-      if (typeof msg === 'object') {
-       console.dir(msg)
-      } else {
-       log(chalk.blue(msg))
-      }
-    })
+    // page.on('console', msg => {
+    //   if (typeof msg === 'object') {
+    //    console.dir(msg)
+    //   } else {
+    //    log(chalk.blue(msg))
+    //   }
+    // })
 
     const result = await parse(page, url, app, options)
 

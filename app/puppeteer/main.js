@@ -4,7 +4,10 @@ const log = console.log
 
 async function main(parse, url, app, options) {
   // 首先通过Puppeteer启动一个浏览器环境
-  const browser = await puppeteer.launch({headless: true})
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox" , "--disable-setuid-sandbox"]
+  })
   log(chalk.green('服务正常启动'))
   try {
     const page = await browser.newPage()

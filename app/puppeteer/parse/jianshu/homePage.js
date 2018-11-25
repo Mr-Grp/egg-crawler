@@ -31,7 +31,7 @@ const main = async(page, url, app, opts = {}) => {
       if(post) {
         log(chalk.yellow( post.type ))
         log(chalk.yellow( opts.type ))
-        if(!post.type.indexOf(opts.type) > -1){
+        if(!(post.type.indexOf(opts.type) > -1)){
           log(chalk.yellow( post.type + opts.type ))
           const row = {
             type: post.type + opts.type,

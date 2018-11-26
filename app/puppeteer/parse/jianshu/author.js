@@ -8,7 +8,7 @@ const main = async(page, url, app) => {
   log(chalk.yellow('页面初次加载完毕'))
 
   //滑动动态加载
-  // await page.waitFor(2500)
+  await page.waitFor(2500)
   const targetUrl = await page.evaluate(() => {
     return document.querySelector('a.find-more').href
      

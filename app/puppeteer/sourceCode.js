@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 
 const browser = puppeteer.launch({
   // executablePath: '/usr/bin/chromium-browser',
-  headless: false,
+  headless: true,
   args: ["--no-sandbox" , "--disable-setuid-sandbox"],
 })
 // logger.info('服务正常启动')
